@@ -16,6 +16,7 @@
     --main-color: #b19975;
     --text-color: #403d4d;
     --bg-color: #ffff;
+    --bgrnd-color: #f5f3f1;
 }
 section{
     padding: 4rem 0 2rem;
@@ -36,9 +37,14 @@ header{
     display: block;
     width: 100%;
     position: fixed;
-    top: 2rem;
+    top: 1rem;
     left: 0;
     z-index: 100;
+}
+.header .active{
+    background: var(--bg-color);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .nav{
     display: flex;
@@ -74,8 +80,7 @@ header{
     text-transform: uppercase;
     font-weight: 500;
 }
-.navbar a:hover,
-.navbar .active{
+.navbar a:hover{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
@@ -104,7 +109,7 @@ header{
     top: 100%;
     right: 0;
     left: 0;
-    background-color: var(--bg-color);
+    background-color: transparent;
     box-shadow: 4px 4px 20px rgb(15, 54, 55 / 10%);
     border: 1px solid var(--main-color);
     border-radius: 0.5rem;
@@ -136,6 +141,7 @@ header{
 }
 .home-text{
     padding-left: 150px;
+    margin-bottom: 4rem;
 }
 .home-text h1{
     font-size: 2.4rem;
@@ -151,7 +157,7 @@ header{
 .home-text a{
     color: var(--text-color);
     font-weight: 500;
-}
+} 
 .announcement{
     font-size: 18px;
     min-height: 55px;
@@ -165,7 +171,7 @@ header{
 }
 .btn{
     padding: 10px 22px;
-    border-radius: 50px;
+    border-radius: 0.5rem;
     background: var(--main-color);
     color: var(--bg-color);
     font-weight: 400;
@@ -184,6 +190,7 @@ header{
 .about{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 4rem;
     align-items: center;
     gap: 1.5rem;
 }
@@ -204,30 +211,30 @@ header{
     font-size: 1rem;
     margin: 0.5rem 0 1.4rem;
 }
-.product-container{
+.category-container{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
 }
-.product-container .box{
+.category-container .box{
     flex: 1 1 17rem;
     position: relative;
     height: 200px;
     border-radius: 0.5rem;
     overflow: hidden;
 }
-.product-container .box img{
+.category-container .box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
 }
-.product-container .box img:hover{
+.category-container .box img:hover{
     transform: scale(1.1);
     transition: 0.5s;
 }
-.product-container .box h2{
+.category-container .box h2{
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -237,10 +244,65 @@ header{
     padding: 8px;
     border-radius: 0.5rem;
 }
-.product-container .box:hover h2{
+.category-container .box:hover h2{
     background: var(--main-color);
     color: var(--bg-color);
 }
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.products-container .box{
+    flex: 1 1 17rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bgrnd-color);
+    border-radius: 0.5rem;
+}
+.products-container .box img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+.products-container .box h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.products-container .box span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.products-container .box .bx{
+    color: var(--main-color);
+    margin: 0.8rem 0;
+}
+.products-container .box .btn{
+    max-width: 120px;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+}
+.products-container .box .details{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.products-container .box .details:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+
+}
+
+
 
 
 
